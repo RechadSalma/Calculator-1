@@ -1,0 +1,14 @@
+Using: webpack / javascript
+Feature: add a second page / 
+deploy: online
+
+########## pseudocode #############
+Create a simple sturcture of the calculator
+
+
+
+
+
+
+
+
