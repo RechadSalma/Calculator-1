@@ -2,8 +2,16 @@ Using: webpack / javascript
 Feature: add a second page / 
 deploy: online
 
-########## pseudocode #############
-Create a simple sturcture of the calculator
+########## MVP #############
+Create a simple sturcture (non-functional) of the calculator on html
+
+create a class
+    add
+    subtract
+    mulitply
+    divide
+    equal
+
 
 
 
