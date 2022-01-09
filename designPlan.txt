@@ -1,17 +1,37 @@
-Using: webpack / javascript
-Feature: add a second page / 
+Using: webpack / javascript / pwa / bootstrap / 
+Feature: Can do simple calculator maths using clicks & buttons
+pages:
+    home: calculator
+    path1: simple heading
 deploy: online
 
 ########## MVP #############
-Create a simple sturcture (non-functional) of the calculator on html
+#create two scaffolding url pages usign react router
 
-create a class
+Import my webpack setup
+
+*page one as calculator     #dont bother with css much
+*page two as a simple heading page
+
+#vanilla pwa
+service workers
+manifest.json file
+cache storage   #to cache files
+
+#calculator function logic
+class
+    constructor
+        current screen value
+        current formula
     add
     subtract
     mulitply
     divide
-    equal
+    backspace
 
+#create second page with react router. Simple side page
+
+#check everything is working accordingly
 
 
 
