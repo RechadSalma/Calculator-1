@@ -1,0 +1,45 @@
+{
+    "name": "ik-calculator-1-2022",
+    "version": "1.0.0",
+    "description": "calculator practice demo",
+    "private": true,
+    "scripts": {
+        "ikupdate": "npm i && npm update && npm audit fix",
+        "build": "webpack --config webpack.production.config.js",
+        "prod": "npm run build && node src/server.js",
+        "start": "webpack serve --config webpack.dev.config.js --hot",
+        "lint": "eslint ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RechadSalma/iK-Calculator-1-2022.git"
+      },
+    "keywords": ["calculator"],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RechadSalma/iK-Calculator-1-2022/issues"
+      },
+                  "homepage": "https://github.com/RechadSalma/iK-Calculator-1-2022#readme",
+    "devDependencies": {
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^6.4.0",
+        "css-minimizer-webpack-plugin": "^3.1.1",
+        "eslint": "^8.0.1",
+        "handlebars-loader": "^1.7.1",
+        "html-webpack-plugin": "^5.4.0",
+        "mini-css-extract-plugin": "^2.4.2",
+        "postcss": "^8.3.9",
+        "postcss-loader": "^6.2.0",
+        "postcss-preset-env": "^6.7.0",
+        "style-loader": "^3.3.0",
+        "webpack": "^5.65.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.7.2"
+    },
+    "dependencies": {
+        "handlebars": "^4.7.7"
+    }
+}
