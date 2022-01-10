@@ -40,7 +40,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "asset/resource",
+                type: "asset",
             },
         ],
     },
@@ -49,13 +49,12 @@ module.exports = {
             filename: "styles.[contenthash].css",
         }),
         new HtmlWebpackPlugin({
-            title: "production javascript webapck template",
+            title: "production ilshady calculator",
             template: "src/index.hbs",
             meta: {
                 viewport: "width=device-width, initial-scale=1",
-                description: "iK SEO describe",
-                keywords:
-                    "iK SEO keywords, however it might not be necessary because it counts for little for google",
+                description: "iK my personal calculator",
+                keywords: "iK calculator rechadsalma",
             },
         }),
     ],
