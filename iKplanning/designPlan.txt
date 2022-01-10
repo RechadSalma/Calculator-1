@@ -10,7 +10,7 @@ deploy: online
 
 Import my webpack setup
 
-*page one as calculator     #dont bother with css much
+*page one as calculator     #dont bother with css much but create with bootstrap grid system
 *page two as a simple heading page
 
 #vanilla pwa

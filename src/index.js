@@ -1,29 +1,36 @@
-import iKh1 from './components/iKh1.js';
-import iKimg from './components/iKimg.js';
-// import iKasync from './components/iKasync.js';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import route from "./router/route.js";
 
-const iKindexjs = () => {
-	const iKdiv = document.createElement('div');
+window.addEventListener("DOMContentLoaded", (event) => {
+    const iKbody = document.getElementsByTagName("body")[0];
 
-	iKdiv.textContent = 'iK from iKindexjs';
+    iKbody.innerHTML = `
+        <div>
+            ${Header()}
+            
+            <h2>big daddy ilshady GG GG GG</h2>
+            ${route()}
+            ${Footer()}
+        </div>
+    `;
 
-	iKdiv.style.border = 'red 3px solid';
+    console.log("iK DOM fully loaded and parsed");
+});
 
-	/*iK if you want to use & test out async/await function in your app */
-	// iKasync() /*1+*/
+// const iKindexjs = () => {
+//     const iKdiv = document.createElement("div");
 
-	console.log('iK from the index.js')
+//     iKdiv.textContent = "iK from iKindexjs";
 
-	return iKdiv;
-}; /*END iKindexjs */
+//     iKdiv.style.border = "red 3px solid";
 
-const iKbody = document.getElementsByTagName('body')[0];
+//     console.log("iK from the index.js");
 
-iKbody.appendChild(iKindexjs());
-iKbody.appendChild(iKh1());
-iKbody.appendChild(iKimg());
+//     return iKdiv;
+// }; /*END iKindexjs */
 
 /**
- * 1+ On your babel config file insert:
- * 		+\ "presets": [["@babel/preset-env", { "targets": { "esmodules": true }} ]]
+ *
  */
