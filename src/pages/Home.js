@@ -1,6 +1,10 @@
+import Calculator from "../components/calculator";
+
 function Home() {
     return `
-        <P>calculator page</p>
+        <h1>Calculator page</h1>
+        <a href="/side">side page</a>
+        ${Calculator()}
     `;
 }
 

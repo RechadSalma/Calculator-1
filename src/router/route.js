@@ -8,11 +8,9 @@ function route() {
         case "/":
             console.log("iK calculator page");
             return Home();
-            break;
         case "/side":
             console.log("iK side page");
             return Side();
-            break;
         default:
             return `<code>iK sorry but this page does not exist</code>`;
     }

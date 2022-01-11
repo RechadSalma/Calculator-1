@@ -1,0 +1,29 @@
+TODO:
+-create snyk connection
+-create two routes //cannot do production routes because my prod is ssr. but maybe when deployed it will have option to a fallback as csr
+-create calculator layout
+	-use bootstrap grid system to create a the calculator
+========DONE==========
+-begin creating the function logic for the calculator
+	-check if the input element is the right element to use
+
+
+
+=======YOU SHOULD DO THIS IF YOU GOT THE TIME========
+-sanitize the layout innerHTML route once finish with routing
+
+
+====COMEBACK=====
+-do lighthouse check
+
+-see whether it is worth IE support
+
+
+======TEMPORARY SIDENOTES=======
+
+
+
+
+
+
+

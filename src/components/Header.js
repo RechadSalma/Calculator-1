@@ -1,6 +1,6 @@
 function Header() {
     return `
-        <header>
+        <header class="bg-primary text-warning container-fluid">
             <h1>This is header function</h1>
         </header>
     `;

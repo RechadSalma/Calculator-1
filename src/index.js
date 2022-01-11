@@ -1,17 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./globalCss.css";
+
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import route from "./router/route.js";
 
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
     const iKbody = document.getElementsByTagName("body")[0];
 
     iKbody.innerHTML = `
         <div>
             ${Header()}
-            
-            <h2>big daddy ilshady GG GG GG</h2>
-            ${route()}
+            <main class="container border border-5 rounded">
+                ${route()}
+            </main>
             ${Footer()}
         </div>
     `;
