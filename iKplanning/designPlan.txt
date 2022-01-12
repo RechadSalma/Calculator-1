@@ -28,6 +28,7 @@ class
     mulitply
     divide
     backspace
+    equal
 
 #create second page with react router. Simple side page
 

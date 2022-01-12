@@ -1,25 +1,23 @@
 import "./Calculator.css";
+// import calculatorFunction from "./calculatorFunction";
 
 function Calculator() {
+    // calculatorFunction();
     return `
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-3"></div>
 
                 <div class="col container-fluid border border-5 border-primary">
-                    <div id="formulaScreen" class="row">
-                        <div class="col">
+                    <div class="row">
+                        <div id="formulaScreen" class="col text-secondary">
                             formula screen
                         </div>
                     </div>
 
-                    <div id="resultScreen" class="row">
-                        <div class="col">
-                            <input 
-                                type="text" 
-                                name="result-screen" 
-                                value="result screen" 
-                                class="container-fluid"/>
+                    <div class="row">
+                        <div id="resultScreen" class="col text-primary">
+                            result screen
                         </div>
                     </div>
 

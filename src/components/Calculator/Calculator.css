@@ -4,11 +4,12 @@
     border-bottom: 2px black solid;
 }
 
-.col {
-    /* padding: 0px; */
-}
-
 div.row:nth-child(n + 3) > .col {
     background-color: rgb(191, 199, 199);
     text-align: center;
+}
+
+#formulaScreen,
+#resultScreen {
+    text-align: right;
 }

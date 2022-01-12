@@ -4,8 +4,25 @@ TODO:
 -create calculator layout
 	-use bootstrap grid system to create a the calculator
 ========DONE==========
--begin creating the function logic for the calculator
-	-check if the input element is the right element to use
+-PWA
+	-iK having trouble getting the manifest.json to work
+	-iK cannot seem to get workbox to work on production mode
+
+-create favicon
+
+-#calculator function logic
+class
+    constructor
+        result value
+        formula screen value	#user should see what they are typing on the screen
+    add
+    subtract
+    mulitply
+    divide
+    backspace
+    equal
+
+
 
 
 
