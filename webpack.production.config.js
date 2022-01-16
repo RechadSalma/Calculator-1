@@ -9,7 +9,7 @@ module.exports = {
         filename: "bundle.[contenthash].js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
-        publicPath: "/static/",
+        // publicPath: "/static/",
     },
     mode: "production",
     optimization: {
@@ -47,6 +47,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "styles.[contenthash].css",
+            linkType: "text/css",
         }),
         new HtmlWebpackPlugin({
             title: "production ilshady calculator",
@@ -56,6 +57,7 @@ module.exports = {
                 description: "iK my personal calculator",
                 keywords: "iK calculator rechadsalma",
             },
+            publicPath: "/",
         }),
     ],
 };
