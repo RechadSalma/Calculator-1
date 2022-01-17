@@ -3,15 +3,13 @@ TODO:
 -create two routes //cannot do production routes because my prod is ssr. but maybe when deployed it will have option to a fallback as csr
 -create calculator layout
 	-use bootstrap grid system to create a the calculator
-========DONE==========
 -PWA
 	-iK having trouble getting the manifest.json to work
 	-iK cannot seem to get workbox to work on production mode
 	-iK created pwatesting repo to test webpack pwa on live server Netlify
 	-iK ALL WORKS AS LONG AS YOU USE LIVE SERVER ONLINE
 	-iK quick test for pwa calculator on live server (netlify), all is ok?
-
--create favicon
+========DONE==========
 
 -#calculator function logic
 class
@@ -41,7 +39,7 @@ class
 
 ======TEMPORARY SIDENOTES=======
 
-npm i -D postcss-preset-env@latest webpack@latest webpack-dev-server@latest
+npm i -D eslint@latest mini-css-extract-plugin@latest postcss-preset-env@latest webpack@latest webpack-dev-server@latest
 
 
 
