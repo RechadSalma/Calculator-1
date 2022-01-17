@@ -6,6 +6,19 @@ import Footer from "./components/Footer.js";
 import route from "./router/route.js";
 
 window.addEventListener("DOMContentLoaded", () => {
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker
+                .register("/service-worker.js")
+                .then((registration) => {
+                    console.log("SW registered: ", registration);
+                })
+                .catch((registrationError) => {
+                    console.log("SW registration failed: ", registrationError);
+                });
+        });
+    }
+
     const iKbody = document.getElementsByTagName("body")[0];
 
     iKbody.innerHTML = `

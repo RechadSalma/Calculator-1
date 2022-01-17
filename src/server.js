@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 
 /*reads our statc files such as css / js / etc… */
-app.use("/static", express.static(path.resolve(__dirname, "../dist")));
+app.use("/", express.static(path.resolve(__dirname, "../dist")));
 
 /*Get node server to read from our bundle index.html file */
 app.get("/", function (req, res) {
