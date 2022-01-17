@@ -9,19 +9,23 @@ TODO:
 	-iK created pwatesting repo to test webpack pwa on live server Netlify
 	-iK ALL WORKS AS LONG AS YOU USE LIVE SERVER ONLINE
 	-iK quick test for pwa calculator on live server (netlify), all is ok?
+	-iK You should switch pwa off while in development otherwise you could get crazy reload problems a lot. Turn back on when your ready to deploy or test site
 ========DONE==========
 
 -#calculator function logic
 class
-    constructor
-        result value
-        formula screen value	#user should see what they are typing on the screen
+    constructor (resultScreenElement, formulaScreenElement)
+        showResultValue = resultScreenElement
+        showFormalaText =	#user should see what they are typing on the screen
+
     add
     subtract
     mulitply
     divide
     backspace
-    equal
+    equal (update value of result value)
+    formulaScreen
+    resetCalculator
 
 
 
