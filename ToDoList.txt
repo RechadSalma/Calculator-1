@@ -1,4 +1,5 @@
 TODO:
+========DONE==========
 -create snyk connection
 -create two routes //cannot do production routes because my prod is ssr. but maybe when deployed it will have option to a fallback as csr
 -create calculator layout
@@ -10,24 +11,27 @@ TODO:
 	-iK ALL WORKS AS LONG AS YOU USE LIVE SERVER ONLINE
 	-iK quick test for pwa calculator on live server (netlify), all is ok?
 	-iK You should switch pwa off while in development otherwise you could get crazy reload problems a lot. Turn back on when your ready to deploy or test site
-========DONE==========
+========LEFT OFF==========
+-currently on calculatorClass.js file
+	-doing pseudo on the class equal() method
+======== PROGESS ==========
 
 -#calculator function logic
 class
     constructor (resultScreenElement, formulaScreenElement)
-        showResultValue = resultScreenElement
-        showFormalaText =	#user should see what they are typing on the screen
+        resultScreenDom
+        resultValue
+	formulaScreenDom
+	formuleEquationString
+	formulaEquationArray
 
-    add
-    subtract
-    mulitply
-    divide
     backspace
     equal (update value of result value)
     formulaScreen
     resetCalculator
+    mathSymbols
 
-
+	-iK? use .reduce() method to add equations
 
 
 
@@ -42,9 +46,6 @@ class
 
 
 ======TEMPORARY SIDENOTES=======
-
-npm i -D eslint@latest mini-css-extract-plugin@latest postcss-preset-env@latest webpack@latest webpack-dev-server@latest
-
 
 
 

@@ -27,17 +27,13 @@ export default function CalculatorFunction() {
     const classCal = new calculatorClass(resultScreenDom, formulaScreenDom);
 
     numberButtonArray.forEach((element) => {
-        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
         element.addEventListener("click", (event) => {
-            classCal.formulaScreen(event.target.textContent);
-
-            // console.log(event.target.textContent);
+            classCal.addToFormulaString(event.target.textContent);
         });
     });
 
     dotButton.addEventListener("click", (event) => {
-        classCal.formulaScreen(event.target.textContent);
-
+        classCal.addToFormulaString(event.target.textContent);
         // console.log(event.target.textContent);
     });
 
@@ -46,6 +42,7 @@ export default function CalculatorFunction() {
     });
 
     plusButton.addEventListener("click", (event) => {
+        classCal.addToFormulaString(` ${event.target.textContent} `);
         console.log(event.target.textContent);
     });
 
