@@ -13,7 +13,9 @@ TODO:
 	-iK You should switch pwa off while in development otherwise you could get crazy reload problems a lot. Turn back on when your ready to deploy or test site
 ========LEFT OFF==========
 -currently on calculatorClass.js file
-	-doing pseudo on the class equal() method
+	-currrently doing pseudo for the handleMulipleDotsAsError method
+		-just done reg expr for detecting multiple dots, & now continue back to pseudo
+			-plan to use .test() method
 ======== PROGESS ==========
 
 -#calculator function logic
@@ -47,7 +49,27 @@ class
 
 ======TEMPORARY SIDENOTES=======
 
+search only legit integar /float number / one dot only ussing .test() method for regular expression
+(^\d*\.?[^\.]\d*$|^\.\d*$)
+	- however ending dot at the end after integar will not work
+	- bizarrely it takes exactly one letter character followed by any degits following. I cannot understand this & cold not get it to go away
 
-
-
+	testing on :
+.
+3
+3.5
+12.5
+.2
+234
+e3
+e
+ee
+..
+...
+2.3.4
+3.3..6
+3..
+2.6.33..
+45.66..6.
+5.6.
 
