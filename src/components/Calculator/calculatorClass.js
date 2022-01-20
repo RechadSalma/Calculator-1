@@ -36,14 +36,45 @@ export default class calculatorClass {
         };
 
         // dotErrors = BOOLEAN flag, display error message to result screen if false as there is multiple dots within numbers
+        let dotErrors = false;
 
-        console.log(reduceResultValueObject);
+        // forEach parseArray to detect errors like multiple dots
+        for (let item of parseArray) {
+            // isANumber : BOOLEAN = test item if it is a legit number
+            let isANumber = this.handleMulipleDotsAsError(item);
+
+            //  IF isANumber === false THEN
+            if (!isANumber) {
+                //      IF item NOT a math sign OR empty whitespace THEN    #its NaN, eg. containing multiple dots
+                if (
+                    item !== "+" ||
+                    item !== "-" ||
+                    item !== "*" ||
+                    item !== "/" ||
+                    item === ""
+                ) {
+                    //          assign true to dotErrors
+                    dotErrors = true;
+                    //          BREAK
+                    break;
+                }
+                //      END IF
+            }
+            //  END IF
+        }
+
+        // IF dotErrors EQUAL TRUE THEN #return error message to result screen
+        if (dotErrors) {
+            //  display error message on the result screen
+            this.resultScreenDom.textContent =
+                "iK please enter correct mathematics";
+            //  exit  out of the equal() class method
+            return;
+        }
+        // END IF
 
         // forEach parseArray to do mathematical sum
         parseArray.forEach((item) => {
-            // check for dot error
-            this.handleMulipleDotsAsError(item);
-
             //  IF +plus math symbol exist THEN
             if (item === "+") {
                 // assign the +plus sign string within the reduceResultValueObject.mathSymbol
@@ -83,22 +114,26 @@ export default class calculatorClass {
 
         // display result value on the result screen
         this.resultScreenDom.textContent = this.resultValue;
+        // reset formula screen / formulaEquationString
+        this.formulaScreenDom.textContent = "Whats next";
+        this.formulaEquationString = "";
     } //END equal - class method
 
     // if there is two or more dots in a number, return error message to user on the result screen
     // When equal button is press, test the split array for multiple dots in number items
     handleMulipleDotsAsError(splitItem) {
-        // IF test for multiple dots as error THEN
+        // regExp = for detecting good integar floating numbers within the whole string number    #i did myself but it is not perfect because does detect floating number if there is a dot at the end
+        const regExp = /(^\d*\.?[^A-Za-z+\-/*&=.\s]\d*$)/;
 
-        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
-    }
+        // RETURN boolean value of the item #true a good number without multiple dots / false a NaN with multiple dots
+        return regExp.test(splitItem);
+    } //END handleMultipleDotsAsError - class method
 
     addToFormulaString(inputButton) {
         // add input button content to this.forulaEquationString
         this.formulaEquationString += inputButton;
         // add formula equation on the formula screen
-        this.formulaScreenDom.textContent = this.formulaEquationString;
-        console.log(this.formulaEquationString);
+        this.formulaScreenDom.textContent = this.formulaEquationString + " ";
     }
 
     // ensure you define the difference between substract symbol & negative number
