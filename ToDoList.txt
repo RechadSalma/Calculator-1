@@ -1,4 +1,5 @@
 TODO:
+========DONE==========
 -create snyk connection
 -create two routes //cannot do production routes because my prod is ssr. but maybe when deployed it will have option to a fallback as csr
 -create calculator layout
@@ -9,21 +10,31 @@ TODO:
 	-iK created pwatesting repo to test webpack pwa on live server Netlify
 	-iK ALL WORKS AS LONG AS YOU USE LIVE SERVER ONLINE
 	-iK quick test for pwa calculator on live server (netlify), all is ok?
-========DONE==========
+	-iK You should switch pwa off while in development otherwise you could get crazy reload problems a lot. Turn back on when your ready to deploy or test site
+========LEFT OFF==========
+-currently on calculatorClass.js file
+	-currrently doing pseudo for the handleMulipleDotsAsError method
+		-just done reg expr for detecting multiple dots, & now continue back to pseudo
+			-plan to use .test() method
+- DECIDING TO END TO PROJECT
+======== PROGESS ==========
 
 -#calculator function logic
 class
-    constructor
-        result value
-        formula screen value	#user should see what they are typing on the screen
-    add
-    subtract
-    mulitply
-    divide
+    constructor (resultScreenElement, formulaScreenElement)
+        resultScreenDom
+        resultValue
+	formulaScreenDom
+	formuleEquationString
+	formulaEquationArray
+
     backspace
-    equal
+    equal (update value of result value)
+    formulaScreen
+    resetCalculator
+    mathSymbols
 
-
+	-iK? use .reduce() method to add equations
 
 
 
@@ -39,10 +50,34 @@ class
 
 ======TEMPORARY SIDENOTES=======
 
-npm i -D eslint@latest mini-css-extract-plugin@latest postcss-preset-env@latest webpack@latest webpack-dev-server@latest
+search only legit integar /float number / one dot only ussing .test() method for regular expression. Not including some math symbols & whitespace I place in there
+/(^\d*\.?[^A-Za-z+\-/*&=.\s]\d*$)/
+	- however it does not pick up ending dot at the end
 
-
-
-
-
-
+	testing on :
+.
+3
+3.5
+12.5
+1.45
+.2
+234
+4.
++
+-
+*
+/
+=
+5.6.
+.3.
+.3.3
+e3
+e
+ee
+..
+...
+2.3.4
+3.3..6
+3..
+2.6.33..
+45.66..6.
